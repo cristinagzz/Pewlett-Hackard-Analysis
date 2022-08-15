@@ -11,3 +11,9 @@ INTO unique_titles
 FROM retirement_titles
 WHERE to_date='9999-01-01' 
 ORDER BY emp_no
+
+SELECT COUNT (emp_no), title
+INTO retirement_titles
+FROM unique_titles 
+GROUP BY title
+ORDER BY COUNT (title) DESC
